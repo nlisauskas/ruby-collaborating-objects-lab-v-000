@@ -9,7 +9,7 @@ attr_accessor :name
   end
 
   def save
-    @@all << self
+    @@all << @artist
   end
 
 end
