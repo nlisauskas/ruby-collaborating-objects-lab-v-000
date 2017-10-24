@@ -1,9 +1,9 @@
 class Song
 
-attr_accessor :name
+attr_accessor :title
 
-  def initialize(name)
-    @name = name
+  def initialize(title)
+    @title = title
   end
 
   def self.new_by_filename(filename)
