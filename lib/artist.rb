@@ -20,8 +20,19 @@ attr_accessor :name, :songs
     self.class.all << self
   end
 
-  def find_or_create_by_name(artist)
-    
+  def self.create_by_name(name)
+    artist = self.new(name)
+    artist.name = name
+    artist.save
+    artist
+  end
+
+  def self.find_by_name(name)
+    self.all.find { |x| x.name == name}
+  end
+
+  def find_or_create_by_name(name)
+    self.find_by_name(name) || self.create_by_name(name)
   end
 
 end
