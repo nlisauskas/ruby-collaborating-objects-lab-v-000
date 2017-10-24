@@ -16,6 +16,10 @@ attr_accessor :name, :songs
     @songs << song
   end
 
+  def self.all
+    @@all
+  end
+
   def find_or_create_by_name(artist)
   end
 
