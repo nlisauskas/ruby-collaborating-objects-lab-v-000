@@ -12,4 +12,8 @@ attr_accessor :name
     @@all << @artist
   end
 
+  def add_song
+    @songs << name
+  end
+
 end
