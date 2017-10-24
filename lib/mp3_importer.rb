@@ -13,7 +13,11 @@ class MP3Importer
   end
 
   def files
-    filepath = Dir.open "/db/mp3s"
+    library = []
+    Dir.entries(path).each do |filename|
+      library << filename
+    end
+    library.reject {|x| x == "." || x == ".."}
   end
 
 end
