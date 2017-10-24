@@ -35,4 +35,8 @@ attr_accessor :name, :songs
     self.find_by_name(name) || self.create_by_name(name)
   end
 
+  def print_songs
+    puts self.songs
+  end
+
 end
