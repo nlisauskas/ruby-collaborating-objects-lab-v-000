@@ -13,6 +13,7 @@ class MP3Importer
   end
 
   def files
+    filepath = Dir.open "/db/mp3s"
   end
 
 end
